@@ -34,46 +34,121 @@
 			"category": "7Rr6IxOMDucKMImp",
 			"name": "multiOmicDataSet file pattern",
 			"param_name": "regex_moo",
+			"description": "Regular expression pattern to match a multiOmicDataset RDS file in data/",
 			"type": "text",
 			"value_type": "string",
-			"default_value": ".*\\\\.rds$",
-			"required": true
+			"default_value": ".*\\.rds$"
 		},
 		{
 			"id": "73xRrg0JvDvhEkPN",
 			"category": "EzTg1ivlFDHEy9PI",
-			"name": "Contrasts column name",
+			"name": "Contrast column name",
 			"param_name": "contrast_colname",
+			"description": "Column in the metadata that contains the group variables you wish to find differential expression between",
 			"type": "text",
-			"value_type": "string"
+			"value_type": "string",
+			"default_value": "Group"
 		},
 		{
 			"id": "IYA5rvgxJuuxYjZY",
 			"category": "EzTg1ivlFDHEy9PI",
-			"name": "Contrasts for comparison",
+			"name": "Contrasts",
 			"param_name": "contrasts",
-			"description": "in format group1-group2,group1-group3",
-			"help_text": "These values must be in the contrasts column",
+			"description": "Comma-separated list of contrasts in format group1-group2 (e.g., treated-control,placebo-control)",
+			"help_text": "This parameter is required. Specify each contrast in format group1-group2",
 			"type": "text",
 			"value_type": "string"
 		},
 		{
 			"id": "7pRIPMdfEf1dq2CS",
 			"category": "EzTg1ivlFDHEy9PI",
-			"name": "Covariates column names",
-			"param_name": "covariates_colname",
-			"description": "comma-separated list of column names containing covariates",
+			"name": "Covariate columns",
+			"param_name": "covariates_colnames",
+			"description": "Comma-separated list of columns containing variables of interest to adjust for (e.g., phenotype, batch)",
+			"help_text": "Most commonly this will be the same column selected for your Contrast Variable",
 			"type": "text",
-			"value_type": "string"
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "k4ReturnMeanSD",
+			"category": "EzTg1ivlFDHEy9PI",
+			"name": "Return mean and SD",
+			"param_name": "return_mean_and_sd",
+			"description": "If TRUE, return Mean and Standard Deviation of groups in addition to DEG estimates",
+			"type": "checkbox",
+			"value_type": "boolean",
+			"default_value": false
 		},
 		{
 			"id": "qsXhqvyKgDh3Vz8u",
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Count type",
 			"param_name": "count_type",
+			"description": "Type of counts to use for differential expression. Must be a count type in names(moo@counts)",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "filt"
+		},
+		{
+			"id": "m1SubCountType",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Sub count type",
+			"param_name": "sub_count_type",
+			"description": "If count_type is a list, specify the sub count type within the list (e.g., voom, rlog)",
+			"help_text": "Leave blank if count_type is not a list",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "u5SampleIDCol",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Sample ID column name",
+			"param_name": "sample_id_colname",
+			"description": "Column from the sample metadata containing sample names",
+			"help_text": "Leave blank to use the first column in the sample metadata by default",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "r6FeatureIDCol",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Feature ID column name",
+			"param_name": "feature_id_colname",
+			"description": "Column from the counts data containing Feature IDs",
+			"help_text": "Leave blank to use the first column in the counts matrix by default",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "t8SamplesToInclude",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Samples to include",
+			"param_name": "samples_to_include",
+			"description": "Comma-separated list of samples to include in the analysis",
+			"help_text": "Leave blank to include all samples",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "w3InputLogCounts",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Input in log counts",
+			"param_name": "input_in_log_counts",
+			"description": "If TRUE, counts are already log2-transformed",
+			"type": "checkbox",
+			"value_type": "boolean",
+			"default_value": false
+		},
+		{
+			"id": "y9VoomNormMethod",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Voom normalization method",
+			"param_name": "voom_normalization_method",
+			"description": "Normalization method for limma::voom. Options: quantile, TMM, TMMwzp, RLE, upperquartile",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "quantile"
 		}
 	],
 	"results": [
