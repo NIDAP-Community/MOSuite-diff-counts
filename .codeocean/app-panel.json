@@ -36,8 +36,7 @@
 			"param_name": "regex_moo",
 			"type": "text",
 			"value_type": "string",
-			"default_value": ".*\\\\.rds$",
-			"required": true
+			"default_value": ".*\\\\.rds$"
 		},
 		{
 			"id": "73xRrg0JvDvhEkPN",
