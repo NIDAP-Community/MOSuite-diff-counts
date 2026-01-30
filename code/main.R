@@ -25,7 +25,7 @@ parser$add_argument("--sub_count_type", type="character", default=NULL, help="Su
 parser$add_argument("--sample_id_colname", type="character", default=NULL, help="Column name for sample IDs")
 parser$add_argument("--feature_id_colname", type="character", default=NULL, help="Column name for feature IDs")
 parser$add_argument("--samples_to_include", type="character", default="", help="Comma-separated list of samples to include")
-parser$add_argument("--covariates_colnames", type="character", default="", help="Comma-separated list of covariate column names")
+parser$add_argument("--covariates_colnames", type="character", default="Group", help="Comma-separated list of covariate column names")
 parser$add_argument("--contrast_colname", type="character", default="Group", help="Column containing group variables for DE")
 parser$add_argument("--contrasts", type="character", default="", help="Contrasts in format group1-group2,group1-group3")
 parser$add_argument("--input_in_log_counts", type="logical", default=FALSE, help="Counts are already log2-transformed")
