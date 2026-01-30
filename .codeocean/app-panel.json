@@ -37,7 +37,7 @@
 			"description": "Regular expression pattern to match a multiOmicDataset RDS file in data/",
 			"type": "text",
 			"value_type": "string",
-			"default_value": ".*\\.rds$"
+			"default_value": ".*\\\\.rds$"
 		},
 		{
 			"id": "73xRrg0JvDvhEkPN",
