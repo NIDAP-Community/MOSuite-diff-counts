@@ -60,7 +60,7 @@
 			"id": "7pRIPMdfEf1dq2CS",
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Covariates column names",
-			"param_name": "covariates_colname",
+			"param_name": "covariates_colnames",
 			"description": "comma-separated list of column names containing covariates",
 			"type": "text",
 			"value_type": "string"
@@ -89,6 +89,50 @@
 			"param_name": "sample_id_colname",
 			"type": "text",
 			"value_type": "string"
+		},
+		{
+			"id": "S3J7pA1Qk4mV9tX2",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Feature ID Column Name",
+			"param_name": "feature_id_colname",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "kP2v8N6mQ1yR5bT9",
+			"category": "EzTg1ivlFDHEy9PI",
+			"name": "Samples to include",
+			"param_name": "samples_to_include",
+			"description": "Comma-separated list of samples to include",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "H8f2L9zV3wQ0nM5r",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Input in log counts",
+			"param_name": "input_in_log_counts",
+			"type": "boolean",
+			"value_type": "boolean",
+			"default_value": false
+		},
+		{
+			"id": "C6d1Y7uP4sE9aJ2x",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Return mean and SD",
+			"param_name": "return_mean_and_sd",
+			"type": "boolean",
+			"value_type": "boolean",
+			"default_value": false
+		},
+		{
+			"id": "nZ5tG3bR8vU2cK7p",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Voom normalization method",
+			"param_name": "voom_normalization_method",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "quantile"
 		}
 	],
 	"results": [
