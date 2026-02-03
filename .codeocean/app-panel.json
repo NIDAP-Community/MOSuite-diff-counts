@@ -34,6 +34,7 @@
 			"category": "7Rr6IxOMDucKMImp",
 			"name": "multiOmicDataSet file pattern",
 			"param_name": "regex_moo",
+			"description": "Regex pattern used to locate the multiOmicDataSet .rds file",
 			"type": "text",
 			"value_type": "string",
 			"default_value": ".*\\\\.rds$"
@@ -43,6 +44,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Contrasts column name",
 			"param_name": "contrast_colname",
+			"description": "Metadata column containing group variables for differential expression (up to 2 columns for 2-factor analysis)",
 			"type": "text",
 			"value_type": "string",
 			"required": true
@@ -52,7 +54,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Contrasts for comparison",
 			"param_name": "contrasts",
-			"description": "in format group1-group2,group1-group3",
+			"description": "Specify contrasts in the format group1-group2,group1-group3 (comma-separated)",
 			"help_text": "These values must be in the contrasts column",
 			"type": "text",
 			"value_type": "string",
@@ -63,7 +65,7 @@
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Covariates column names",
 			"param_name": "covariates_colname",
-			"description": "comma-separated list of column names containing covariates",
+			"description": "Comma-separated list of columns to be used as covariates in linear modeling; must include the contrast column",
 			"type": "text",
 			"value_type": "string",
 			"required": true
@@ -73,6 +75,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Count type",
 			"param_name": "count_type",
+			"description": "Counts slot name to use for differential expression (e.g., filt)",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "filt"
@@ -82,6 +85,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "sub count type",
 			"param_name": "sub_count_type",
+			"description": "If count_type is a list, specify the sub count type within the list",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -90,6 +94,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Sample ID Column Name",
 			"param_name": "sample_id_colname",
+			"description": "Column name in sample metadata for sample IDs",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -98,6 +103,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Feature ID column name",
 			"param_name": "feature_id_colname",
+			"description": "Column name in counts table for feature IDs (e.g., gene)",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -106,6 +112,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Samples to Include",
 			"param_name": "samples_to_include",
+			"description": "Comma-separated list of samples to include",
 			"type": "text",
 			"value_type": "string"
 		},
@@ -114,6 +121,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Input in log counts",
 			"param_name": "input_in_log_counts",
+			"description": "Set TRUE if counts are already log2-transformed",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "FALSE"
@@ -123,6 +131,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "Return mean and sd",
 			"param_name": "return_mean_and_sd",
+			"description": "Return group means and standard deviations in addition to DE estimates",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "FALSE"
@@ -132,6 +141,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "voom normalization method",
 			"param_name": "voom_normalization_method",
+			"description": "Normalization method passed to limma::voom",
 			"type": "text",
 			"value_type": "string",
 			"default_value": "quantile"
