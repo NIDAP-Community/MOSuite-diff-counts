@@ -73,6 +73,22 @@
 			"type": "text",
 			"value_type": "string",
 			"default_value": "filt"
+		},
+		{
+			"id": "WoZUI91NYysibcVj",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "sub count type",
+			"param_name": "sub_count_type",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "w1kntbu7DvR0ABp2",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Sample ID Column Name",
+			"param_name": "sample_id_colname",
+			"type": "text",
+			"value_type": "string"
 		}
 	],
 	"results": [
