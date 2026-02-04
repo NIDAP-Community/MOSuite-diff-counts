@@ -14,8 +14,9 @@
 	"categories": [
 		{
 			"id": "7Rr6IxOMDucKMImp",
-			"name": "Input data parameters",
-			"icon": "📂"
+			"name": "Input Data Parameters",
+			"description": "Options for defining input data",
+			"icon": "📁"
 		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
@@ -25,6 +26,7 @@
 		{
 			"id": "FvI4Z2eb9sjL47Jt",
 			"name": "Advanced",
+			"description": "Advanced parameters",
 			"icon": "📂"
 		}
 	],
