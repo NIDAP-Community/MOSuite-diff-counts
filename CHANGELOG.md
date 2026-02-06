@@ -1,9 +1,10 @@
 # Code Ocean capsule - MOSuite - differential expression analysis
 
-## development version
+## v2.0
 
 - Standardize parameters across MOSuite capsules.
 - Fix: remove `regex_moo` parameter from configuration. multiOmicDataSet input files are now required to follow the standardized naming pattern (`.*\.rds$`).
+- Use MOSuite v0.3.0.
 
 ## v1.0
 
