@@ -1,5 +1,9 @@
 # Code Ocean capsule - MOSuite - differential expression analysis
 
+## development version
+
+- Set default contrasts column, contrast values, and covariates column names based on NIDAP 1.0 training data.
+
 ## v2.0
 
 - Standardize parameters across MOSuite capsules.
