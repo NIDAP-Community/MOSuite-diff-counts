@@ -39,6 +39,7 @@
 			"description": "Metadata column containing group variables for differential expression (up to 2 columns for 2-factor analysis)",
 			"type": "text",
 			"value_type": "string",
+			"default_value": "Group",
 			"required": true
 		},
 		{
@@ -50,6 +51,7 @@
 			"help_text": "These values must be in the contrasts column",
 			"type": "text",
 			"value_type": "string",
+			"default_value": "B-A,B-C,C-A",
 			"required": true
 		},
 		{
@@ -60,6 +62,7 @@
 			"description": "Comma-separated list of columns to be used as covariates in linear modeling; must include the contrast column",
 			"type": "text",
 			"value_type": "string",
+			"default_value": "Group,Batch",
 			"required": true
 		},
 		{
