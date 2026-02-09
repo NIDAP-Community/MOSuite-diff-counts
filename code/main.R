@@ -1,5 +1,4 @@
 #!/usr/bin/env Rscript
-rlang::global_entrace()
 library(argparse)
 library(glue)
 library(MOSuite)
@@ -53,4 +52,4 @@ moo |>
         return_mean_and_sd = args$return_mean_and_sd,
         voom_normalization_method = args$voom_normalization_method
         ) |> 
-    write_rds(file.path(getOption("moo_plots_dir"), "..", "moo", "moo.rds"))
+    write_rds(file.path(getOption("moo_plots_dir"), "..", "moo", "moo-diff.rds"))
