@@ -2,6 +2,8 @@
 
 ## development version
 
+- The MOSuite package is now available in `code/MOSuite`. (#2)
+- Use MOSuite v0.3.1.
 - Set default contrasts column, contrast values, and covariates column names based on NIDAP 1.0 training data.
 
 ## v2.0
