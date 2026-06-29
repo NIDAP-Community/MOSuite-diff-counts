@@ -71,9 +71,14 @@
 			"name": "Count type",
 			"param_name": "count_type",
 			"description": "Counts slot name to use for differential expression (e.g., filt)",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "filt"
+			"default_value": "filt",
+			"extra_data": [
+				"raw",
+				"clean",
+				"filt"
+			]
 		},
 		{
 			"id": "WoZUI91NYysibcVj",
