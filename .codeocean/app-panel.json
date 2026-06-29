@@ -16,21 +16,36 @@
 			"id": "7Rr6IxOMDucKMImp",
 			"name": "Input Data Parameters",
 			"description": "Options for defining input data",
-			"icon": "📁"
+			"icon": "\ud83d\udcc1"
 		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
 			"name": "Basic",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		},
 		{
 			"id": "FvI4Z2eb9sjL47Jt",
 			"name": "Advanced",
 			"description": "Advanced parameters",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		}
 	],
 	"parameters": [
+		{
+			"id": "qsXhqvyKgDh3Vz8u",
+			"category": "EzTg1ivlFDHEy9PI",
+			"name": "Count type",
+			"param_name": "count_type",
+			"description": "Counts slot name to use for differential expression (e.g., filt)",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "filt",
+			"extra_data": [
+				"raw",
+				"clean",
+				"filt"
+			]
+		},
 		{
 			"id": "73xRrg0JvDvhEkPN",
 			"category": "EzTg1ivlFDHEy9PI",
@@ -64,21 +79,6 @@
 			"value_type": "string",
 			"default_value": "Group,Batch",
 			"required": true
-		},
-		{
-			"id": "qsXhqvyKgDh3Vz8u",
-			"category": "FvI4Z2eb9sjL47Jt",
-			"name": "Count type",
-			"param_name": "count_type",
-			"description": "Counts slot name to use for differential expression (e.g., filt)",
-			"type": "list",
-			"value_type": "string",
-			"default_value": "filt",
-			"extra_data": [
-				"raw",
-				"clean",
-				"filt"
-			]
 		},
 		{
 			"id": "WoZUI91NYysibcVj",
