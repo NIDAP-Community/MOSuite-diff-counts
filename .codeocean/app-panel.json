@@ -149,7 +149,7 @@
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "voom normalization method",
 			"param_name": "voom_normalization_method",
-			"description": "Normalization method for differential expression. edgeR methods are applied with calcNormFactors before voom; limma methods are passed to voom normalize.",
+			"description": "Normalization method for differential expression. edgeR methods are applied with calcNormFactors before voom; limma methods are passed to voom normalize. limma options: quantile, scale, cyclicloess, none. edgeR options: TMM, TMMwzp, RLE, upperquartile.",
 			"type": "list",
 			"value_type": "string",
 			"default_value": "quantile",
