@@ -122,9 +122,13 @@
 			"name": "Input in log counts",
 			"param_name": "input_in_log_counts",
 			"description": "Set TRUE if counts are already log2-transformed",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "FALSE"
+			"default_value": "FALSE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "yxhLfINFuSTTS3Fj",
@@ -132,19 +136,33 @@
 			"name": "Return mean and sd",
 			"param_name": "return_mean_and_sd",
 			"description": "Return group means and standard deviations in addition to DE estimates",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "FALSE"
+			"default_value": "FALSE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "Uq2LuAF8ff8pzM9e",
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "voom normalization method",
 			"param_name": "voom_normalization_method",
-			"description": "Normalization method passed to limma::voom",
-			"type": "text",
+			"description": "Normalization method for differential expression. edgeR methods are applied with calcNormFactors before voom; limma methods are passed to voom normalize.",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "quantile"
+			"default_value": "quantile",
+			"extra_data": [
+				"TMM",
+				"TMMwzp",
+				"RLE",
+				"upperquartile",
+				"none",
+				"scale",
+				"quantile",
+				"cyclicloess"
+			]
 		}
 	],
 	"results": [
