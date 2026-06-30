@@ -2,7 +2,7 @@
 
 ## Development version
 
-- Improved the Code Ocean parameter UI for the diff counts capsule (#3).
+- Improved the Code Ocean parameter UI for the diff counts capsule (#3, @phoman14).
 
 ## v3.0
 
