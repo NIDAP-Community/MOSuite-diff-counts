@@ -154,14 +154,14 @@
 			"value_type": "string",
 			"default_value": "quantile",
 			"extra_data": [
+				"quantile",
+				"scale",
+				"cyclicloess",
+				"none",
 				"TMM",
 				"TMMwzp",
 				"RLE",
-				"upperquartile",
-				"none",
-				"scale",
-				"quantile",
-				"cyclicloess"
+				"upperquartile"
 			]
 		}
 	],
