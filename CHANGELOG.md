@@ -1,5 +1,9 @@
 # Code Ocean capsule - MOSuite - differential expression analysis
 
+## Development version
+
+- Improved the Code Ocean parameter UI for the diff counts capsule (#3, @phoman14).
+
 ## v3.0
 
 - The MOSuite package is now available in `code/MOSuite`. (#2)

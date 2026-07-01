@@ -16,21 +16,36 @@
 			"id": "7Rr6IxOMDucKMImp",
 			"name": "Input Data Parameters",
 			"description": "Options for defining input data",
-			"icon": "📁"
+			"icon": "\ud83d\udcc1"
 		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
 			"name": "Basic",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		},
 		{
 			"id": "FvI4Z2eb9sjL47Jt",
 			"name": "Advanced",
 			"description": "Advanced parameters",
-			"icon": "📂"
+			"icon": "\ud83d\udcc2"
 		}
 	],
 	"parameters": [
+		{
+			"id": "qsXhqvyKgDh3Vz8u",
+			"category": "EzTg1ivlFDHEy9PI",
+			"name": "Count type",
+			"param_name": "count_type",
+			"description": "Counts slot name to use for differential expression (e.g., filt)",
+			"type": "list",
+			"value_type": "string",
+			"default_value": "filt",
+			"extra_data": [
+				"raw",
+				"clean",
+				"filt"
+			]
+		},
 		{
 			"id": "73xRrg0JvDvhEkPN",
 			"category": "EzTg1ivlFDHEy9PI",
@@ -64,16 +79,6 @@
 			"value_type": "string",
 			"default_value": "Group,Batch",
 			"required": true
-		},
-		{
-			"id": "qsXhqvyKgDh3Vz8u",
-			"category": "FvI4Z2eb9sjL47Jt",
-			"name": "Count type",
-			"param_name": "count_type",
-			"description": "Counts slot name to use for differential expression (e.g., filt)",
-			"type": "text",
-			"value_type": "string",
-			"default_value": "filt"
 		},
 		{
 			"id": "WoZUI91NYysibcVj",
@@ -117,9 +122,13 @@
 			"name": "Input in log counts",
 			"param_name": "input_in_log_counts",
 			"description": "Set TRUE if counts are already log2-transformed",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "FALSE"
+			"default_value": "FALSE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "yxhLfINFuSTTS3Fj",
@@ -127,19 +136,33 @@
 			"name": "Return mean and sd",
 			"param_name": "return_mean_and_sd",
 			"description": "Return group means and standard deviations in addition to DE estimates",
-			"type": "text",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "FALSE"
+			"default_value": "FALSE",
+			"extra_data": [
+				"TRUE",
+				"FALSE"
+			]
 		},
 		{
 			"id": "Uq2LuAF8ff8pzM9e",
 			"category": "FvI4Z2eb9sjL47Jt",
 			"name": "voom normalization method",
 			"param_name": "voom_normalization_method",
-			"description": "Normalization method passed to limma::voom",
-			"type": "text",
+			"description": "Normalization method for differential expression. edgeR methods are applied with calcNormFactors before voom; limma methods are passed to voom normalize. limma options: quantile, scale, cyclicloess, none. edgeR options: TMM, TMMwzp, RLE, upperquartile.",
+			"type": "list",
 			"value_type": "string",
-			"default_value": "quantile"
+			"default_value": "quantile",
+			"extra_data": [
+				"quantile",
+				"scale",
+				"cyclicloess",
+				"none",
+				"TMM",
+				"TMMwzp",
+				"RLE",
+				"upperquartile"
+			]
 		}
 	],
 	"results": [
