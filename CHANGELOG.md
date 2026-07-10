@@ -3,6 +3,7 @@
 ## Development version
 
 - Improved the Code Ocean parameter UI for the diff counts capsule (#3, @phoman14).
+- Use MOSuite v0.3.2. (#4, @kelly-sovacool)
 
 ## v3.0
 
