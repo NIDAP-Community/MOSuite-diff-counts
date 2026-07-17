@@ -16,18 +16,18 @@
 			"id": "7Rr6IxOMDucKMImp",
 			"name": "Input Data Parameters",
 			"description": "Options for defining input data",
-			"icon": "\ud83d\udcc1"
+			"icon": "📁"
 		},
 		{
 			"id": "EzTg1ivlFDHEy9PI",
 			"name": "Basic",
-			"icon": "\ud83d\udcc2"
+			"icon": "📂"
 		},
 		{
 			"id": "FvI4Z2eb9sjL47Jt",
 			"name": "Advanced",
 			"description": "Advanced parameters",
-			"icon": "\ud83d\udcc2"
+			"icon": "📂"
 		}
 	],
 	"parameters": [
@@ -66,7 +66,7 @@
 			"help_text": "These values must be in the contrasts column",
 			"type": "text",
 			"value_type": "string",
-			"default_value": "B-A,B-C,C-A",
+			"default_value": "B-A, B-C, C-A",
 			"required": true
 		},
 		{
@@ -77,8 +77,7 @@
 			"description": "Comma-separated list of columns to be used as covariates in linear modeling; must include the contrast column",
 			"type": "text",
 			"value_type": "string",
-			"default_value": "Group,Batch",
-			"required": true
+			"default_value": "Batch"
 		},
 		{
 			"id": "WoZUI91NYysibcVj",
