@@ -1,3 +1,17 @@
+test_that("app panel passes covariates_colnames to main.R", {
+  repo_root <- normalizePath(
+    file.path(testthat::test_path(), "..", ".."),
+    mustWork = TRUE
+  )
+  panel <- jsonlite::fromJSON(
+    file.path(repo_root, ".codeocean", "app-panel.json")
+  )
+  panel_params <- panel$parameters$param_name
+
+  expect_true("covariates_colnames" %in% panel_params)
+  expect_false("covariates_colname" %in% panel_params)
+})
+
 test_that("main.R CLI creates differential analysis output", {
   setup <- setup_cli_workspace("mosuite_diff_counts_test_")
   on.exit(unlink(setup$workspace, recursive = TRUE), add = TRUE)

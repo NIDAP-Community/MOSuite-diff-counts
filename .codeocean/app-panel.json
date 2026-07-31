@@ -73,7 +73,7 @@
 			"id": "7pRIPMdfEf1dq2CS",
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Covariates column names",
-			"param_name": "covariates_colname",
+			"param_name": "covariates_colnames",
 			"description": "Comma-separated list of columns to be used as covariates in linear modeling; must include the contrast column",
 			"type": "text",
 			"value_type": "string",
