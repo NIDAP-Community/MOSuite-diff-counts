@@ -1,3 +1,35 @@
+test_that("every app panel parameter is accepted and used by main.R", {
+  repo_root <- normalizePath(
+    file.path(testthat::test_path(), "..", ".."),
+    mustWork = TRUE
+  )
+  panel <- jsonlite::fromJSON(
+    file.path(repo_root, ".codeocean", "app-panel.json")
+  )
+  main_text <- paste(
+    readLines(file.path(repo_root, "code", "main.R"), warn = FALSE),
+    collapse = "\n"
+  )
+
+  param_names <- panel$parameters$param_name
+  expect_true(length(param_names) > 0)
+
+  for (param_name in param_names) {
+    expect_match(
+      main_text,
+      sprintf('"--%s"', param_name),
+      fixed = TRUE,
+      info = sprintf("main.R should define a --%s CLI argument", param_name)
+    )
+    expect_match(
+      main_text,
+      sprintf("args$%s", param_name),
+      fixed = TRUE,
+      info = sprintf("main.R should read args$%s", param_name)
+    )
+  }
+})
+
 test_that("main.R CLI creates differential analysis output", {
   setup <- setup_cli_workspace("mosuite_diff_counts_test_")
   on.exit(unlink(setup$workspace, recursive = TRUE), add = TRUE)
