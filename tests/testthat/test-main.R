@@ -1,4 +1,4 @@
-test_that("app panel passes covariates_colnames to main.R", {
+test_that("every app panel parameter is accepted and used by main.R", {
   repo_root <- normalizePath(
     file.path(testthat::test_path(), "..", ".."),
     mustWork = TRUE
@@ -6,10 +6,28 @@ test_that("app panel passes covariates_colnames to main.R", {
   panel <- jsonlite::fromJSON(
     file.path(repo_root, ".codeocean", "app-panel.json")
   )
-  panel_params <- panel$parameters$param_name
+  main_text <- paste(
+    readLines(file.path(repo_root, "code", "main.R"), warn = FALSE),
+    collapse = "\n"
+  )
 
-  expect_true("covariates_colnames" %in% panel_params)
-  expect_false("covariates_colname" %in% panel_params)
+  param_names <- panel$parameters$param_name
+  expect_true(length(param_names) > 0)
+
+  for (param_name in param_names) {
+    expect_match(
+      main_text,
+      sprintf('"--%s"', param_name),
+      fixed = TRUE,
+      info = sprintf("main.R should define a --%s CLI argument", param_name)
+    )
+    expect_match(
+      main_text,
+      sprintf("args$%s", param_name),
+      fixed = TRUE,
+      info = sprintf("main.R should read args$%s", param_name)
+    )
+  }
 })
 
 test_that("main.R CLI creates differential analysis output", {
