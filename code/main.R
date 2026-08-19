@@ -88,7 +88,7 @@ if (identical(args$contrasts, "")) {
 }
 
 # run MOSuite
-moo |>
+moo_diff <- moo |>
   diff_counts(
     count_type = args$count_type,
     sub_count_type = args$sub_count_type,
@@ -104,5 +104,15 @@ moo |>
     input_in_log_counts = args$input_in_log_counts,
     return_mean_and_sd = args$return_mean_and_sd,
     voom_normalization_method = args$voom_normalization_method
-  ) |>
+  )
+
+moo_diff |>
   write_rds(file.path(getOption("moo_plots_dir"), "..", "moo", "moo-diff.rds"))
+
+# emit a merged, contrast-prefixed DEG table for downstream tools (e.g. OMIX)
+# that consume a flat table rather than a multiOmicDataSet
+deg_dir <- file.path(getOption("moo_plots_dir"), "..", "deg")
+dir.create(deg_dir, recursive = TRUE, showWarnings = FALSE)
+moo_diff@analyses$diff |>
+  join_dfs_wide() |>
+  write_csv(file.path(deg_dir, "DEG_Analysis.csv"))

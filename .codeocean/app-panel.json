@@ -167,6 +167,9 @@
 	"results": [
 		{
 			"file_name": "figures/diff/mean-variance.png"
+		},
+		{
+			"file_name": "deg/DEG_Analysis.csv"
 		}
 	]
 }
