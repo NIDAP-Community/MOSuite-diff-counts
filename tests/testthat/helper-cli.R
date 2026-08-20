@@ -9,6 +9,7 @@ setup_cli_workspace <- function(prefix = "mosuite_diff_counts_test_") {
   dir.create(data_dir, recursive = TRUE)
   dir.create(file.path(results_dir, "figures"), recursive = TRUE)
   dir.create(file.path(results_dir, "moo"), recursive = TRUE)
+  dir.create(file.path(results_dir, "deg"), recursive = TRUE)
 
   repo_root <- normalizePath(
     file.path(testthat::test_path(), "..", ".."),
@@ -68,6 +69,22 @@ expect_outputs_created <- function(results_dir) {
   expect_true(
     "diff" %in% names(moo@analyses),
     info = "Output should have diff results in moo@analyses"
+  )
+
+  deg_path <- file.path(results_dir, "deg", "DEG_Analysis.csv")
+  expect_true(
+    file.exists(deg_path),
+    info = "Merged DEG table should be created"
+  )
+  expect_true(
+    file.info(deg_path)$size > 0,
+    info = "Merged DEG table should be non-empty"
+  )
+
+  deg_dat <- readr::read_csv(deg_path, show_col_types = FALSE)
+  expect_true(
+    all(c("B-A_logFC", "B-A_pval", "B-A_adjpval") %in% colnames(deg_dat)),
+    info = "Merged DEG table should have contrast-prefixed columns for OMIX compatibility"
   )
 }
 
