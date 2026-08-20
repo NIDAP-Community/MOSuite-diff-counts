@@ -1,5 +1,7 @@
 # Code Ocean capsule - MOSuite - differential expression analysis
 
+## development header
+
 ## v4.0
 
 - Emit a merged, contrast-prefixed DEG table (`deg/DEG_Analysis.csv`) alongside the existing MOO output, for compatibility with downstream tools such as OMIX-GSEA-Preranked-Legacy that expect a flat DEG table (#9, @TJoshMeyer).
