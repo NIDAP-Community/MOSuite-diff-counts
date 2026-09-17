@@ -1,6 +1,6 @@
 # Code Ocean capsule - MOSuite - differential expression analysis
 
-## development header
+## v5.0
 
 - Use MOSuite v0.5.0. (#10, @kelly-sovacool)
 
