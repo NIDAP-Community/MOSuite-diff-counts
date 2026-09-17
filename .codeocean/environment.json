@@ -1,6 +1,6 @@
 {
 	"version": 1,
-	"base_image": "codeocean/mosuite-minimal:v0.3.1",
+	"base_image": "codeocean/mosuite-minimal:v0.5.0",
 	"post_install": true,
 	"options": {
 		"registry_host_arg": true,
